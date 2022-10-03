@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="auth">
-                        <a href="">Sign</a>
+                        <a href="">In process</a>
             </div>
         </div>
     </div>
