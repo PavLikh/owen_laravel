@@ -12,10 +12,8 @@ class RegisterController extends Controller
 
     public function save(Request $request){
         if(Auth::check()){
-            // return redirect(route('user.private'));
             return redirect(route('home'));
         }
-        // dd($request);
         $validateFields = $request->validate([
             'login' => 'required',
             'email' => 'required|email',
@@ -29,13 +27,8 @@ class RegisterController extends Controller
         }
 
         $user = User::create($validateFields);
-        // dd($user);
         if($user) {
             auth()->login($user);
-            // Auth::login($user); //same
-
-            // return redirect()->to(route('user.private'));
-            // return redirect(route('user.private')); //same
             return redirect(route('home')); //same
         }
 

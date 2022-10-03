@@ -18,11 +18,8 @@ Route::get('/article/{articleId}', 'ArticlePageController@index')->name('article
 Route::post('/article/edit', 'ArticlePageController@edit')->name('article.edit');
 
 Route::name('user.')->group(function(){
-    // Route::view('/private', 'private')->middleware('auth')->name('private');
-
     Route::get('/login', function(){
         if(Auth::check()){
-            // return redirect(route('user.private'));
             return redirect(route());
         }
         return view('login');
@@ -37,7 +34,6 @@ Route::name('user.')->group(function(){
 
     Route::get('registration', function(){
         if(Auth::check()) {
-            // return redirect(route('user.private'));
             return redirect(route('home'));
         }
         return view('registration');
