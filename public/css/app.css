@@ -112,7 +112,6 @@ a {
 }
 
 .auth {
-    /* background-color: #F0FFF0; */
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
