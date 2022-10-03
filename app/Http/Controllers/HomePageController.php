@@ -14,25 +14,11 @@ class HomePageController extends Controller
             ->join('users', 'articles.user_id', '=', 'users.id')
             ->join('groups', 'users.group_id', '=', 'groups.id')
             ->get()->toArray();
-            // ->toArray();
-// foreach($catalog as $item) {
         $data;
         foreach ($catalog as $article) {
             $article['text'] = $this->trimLine($article['text']);
             $data[] = $article;
         }
-
-
-
-        // dd($data);
-// }
-
-//             $catalog->each(function($post)
-// {
-//     dd($post);
-// });
-
-// dd($catalog);
 
         return view('home')->withCatalog($data);
     }
@@ -40,10 +26,8 @@ class HomePageController extends Controller
     public function trimLine($line, $lineLength = 200)
     {
         if (strlen($line) > $lineLength) {
-            // $line = substr($line, 0, $lineLength) . '...';
             $line = mb_substr($line, 0, $lineLength) . '...';
         }
-        // dd($line);
         return $line;
     }
 }

@@ -14,8 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomePageController@index')->name('home');
-
 Route::get('/article/{articleId}', 'ArticlePageController@index')->name('article');
-
-
 Route::post('/article/edit', 'ArticlePageController@edit')->name('article.edit');

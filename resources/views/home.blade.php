@@ -11,15 +11,11 @@
 
     <div class="item discount60">
         <a href="/article/{{ $item['id'] }}">
-        <!-- <img src="{{ asset('img/default.webp') }}" alt=""> -->
-        <!-- <img src=" asset('img/ ' . $data->id . '.jpg') " alt=""> -->
         <img src="img/{{ $item['id'] }}.jpg" alt="">
 
         <div class="description">
             <div class="title">
-                    <!-- <div class="title_val"> -->
                 <h4>{{ $item['title'] }}</h4>
-                    <!-- </div> -->
             </div>
             <div class="info">
                 {{ $item['text'] }}

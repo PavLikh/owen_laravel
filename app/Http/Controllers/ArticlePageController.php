@@ -25,7 +25,6 @@ class ArticlePageController extends Controller
             $user = Article::where("id","=", $req->id)->first();
             $user->setAttribute('title',  $req->title);
             $user->save();
-            // echo 'OK';
         }
         return response()->json([
             'update' => 'Ok'
@@ -33,5 +32,3 @@ class ArticlePageController extends Controller
     }
 
 }
-
-//Музей Востока представляет выставку «Республика Адыгея. Дорогами эпох и цивилизаций»
