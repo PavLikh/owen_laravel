@@ -7,29 +7,35 @@
 @php
     $path = 'img/' . $data->id . '.jpg';
 @endphp
-
 <div class="i-container">
     <section class="article">
         <div>
 
-            <div class="form-group">
+            <div class="f-group">
 
                 <div class="row">
-                <button class="btn disable">Изменить</button>
+                @auth
+                    <button class="btn disable">Изменить</button>
+                @endauth
                     <img src="{{ asset($path) }}" alt="">
                 </div>
                 <div class="row"  id="category">
+                @auth
                     <button class="btn disable">Изменить</button>
+                @endauth
                     <div class="category">{{ $data->category }}</div>
                 </div>
                 <div class="row" id="title">
-
-                        <button class="btn edit">Изменить</button>
-                        <h3>{{ $data->title }}</h3>
+                @auth
+                    <button class="btn edit">Изменить</button>
+                @endauth
+                    <h3>{{ $data->title }}</h3>
                 </div>
                 <div class="row">
                     <div class="left">
+                    @auth
                         <button class="btn disable">Изменить</button>
+                    @endauth
                     </div>
                     <div>{{ $data->text }}</div>
                 </div>
