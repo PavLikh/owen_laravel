@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use Illuminate\Support\Facades\Auth;
 
 class HomePageController extends Controller
 {
@@ -19,7 +20,6 @@ class HomePageController extends Controller
             $article['text'] = $this->trimLine($article['text']);
             $data[] = $article;
         }
-
         return view('home')->withCatalog($data);
     }
 

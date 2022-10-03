@@ -33,6 +33,10 @@ a {
     cursor: pointer;
 }
 
+.alert {
+    background-color: #F08080;
+}
+
 .edit {
     background-color: #3CB371;
 }
@@ -66,6 +70,23 @@ a {
     height: 102px;
 }
 
+.form-wrapper {
+    margin: auto;
+    margin-top: 20px;
+    width: 260px;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.subnit {
+    margin: auto;
+}
+
 .logo_header {
     text-align: left;
     width: 50%;
@@ -90,12 +111,27 @@ a {
 }
 
 .auth {
-    background-color: #F0FFF0;
+    /* background-color: #F0FFF0; */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.auth a{
+    margin-right: 15px;
 }
 
 .header-menu {
     height: 43px;
     background-color: #9f0412;
+    color: #fff;
+    text-align: center
+}
+
+.header-menu h2 {
+    margin: auto;
+    text-align: center;
+    line-height: 43px;
 }
 
 /* ==CATALOG== */

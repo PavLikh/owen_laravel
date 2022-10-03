@@ -14,7 +14,7 @@ class User extends Authenticable
 // class User extends Model
 {
     use HasFactory;
-    protected $fillable = ['email', 'password'];
+    protected $fillable = ['login', 'email', 'password'];
 
     public function setPasswordAttribute($password){
         $this->attributes['password'] = Hash::make($password);
