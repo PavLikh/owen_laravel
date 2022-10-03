@@ -21,7 +21,7 @@ class CreateArticlesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');
             $table->text('text');
-            $table->string('img')->nullable();;
+            $table->string('img')->nullable();
             $table->timestamps();
         });
     }

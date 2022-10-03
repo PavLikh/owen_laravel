@@ -7,9 +7,27 @@
                 </a>
             </div>
             <div class="auth">
-                        <a href="">In process</a>
+            @php
+            $link = ['login', 'Войти']
+            @endphp
+
+
+            @auth
+            @php
+            $link = ['logout', 'Выйти']
+            @endphp
+
+            @endauth
+            @guest
+                <a href="/registration">Регистрация</a>
+            @endguest
+            <a href="/{{ $link[0] }}">{{ $link[1] }}</a>
             </div>
         </div>
     </div>
 </div>
-<div class="header-menu"></div>
+<div class="header-menu">
+@guest
+<h2>Вы не авторизованы</h2>
+@endguest
+</div>
